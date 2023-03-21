@@ -1,0 +1,26 @@
+.today{
+margin-top: 2rem;
+width: 600px;
+min-height: 400px;
+box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
+padding: 2rem;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+border-radius: 15px;
+position: relative;
+}
+.today .img,.today .info{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.today .img img{
+  width: 100%;
+}
+.today .info{
+  padding: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
