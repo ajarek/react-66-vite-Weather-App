@@ -5,11 +5,13 @@ const ListNextDays = ({array}) => {
   return (
     <div className='list-next-days'>
      {array.map((el,index)=>{
+     
+
       return(
          <div className="day" key={index}>
-           <p>Friday</p>
-           <img src="/images/01d.svg" alt="" />
-           <p>21°C</p>
+           <p>{ new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date(el.dt_txt))}</p>
+           <img src={`/images/${el.weather[0].icon}.svg`} alt="" />
+           <p>{el.main.temp}°C</p>
          </div>
       )
 

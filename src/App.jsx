@@ -13,7 +13,7 @@ function App() {
   const [newTemp, setNewTemp] = useState('')
   const [newDesc, setNewDesc] = useState('')
   const [newIcon, setNewIcon] = useState('')
-  const array=[1,2,3,4]
+  const [array, setArray]=useState([])
 
   const debouncedSearchValue = useDebounce(searchValue, 1000) || 'Kołobrzeg'
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${debouncedSearchValue}&APPID=96d145cbc67ffa8619b24c37dd8a0cab&units=metric`
@@ -21,13 +21,16 @@ function App() {
   const { data, pending, error } = useFetch(url)
   useEffect(() => {
     if (data) {
+      const filterArray=data.list.filter((item,index) => index%8===0&&index>0)
       const { city } = data
       setNewCity(city.name)
       setNewTemp(data.list[0].main.temp)
       setNewDesc(data.list[0].weather[0].description)
       setNewIcon(data.list[0].weather[0].icon)
+      setArray(filterArray)
     }
-  })
+  },[data])
+
   return (
     <div className='App'>
       {pending ? (
