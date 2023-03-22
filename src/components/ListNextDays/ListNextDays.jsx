@@ -16,7 +16,7 @@ const ListNextDays = ({ array }) => {
               )}
             </p>
             <img
-              src={`/images/${el.weather[0].icon}.svg`}
+              src={`./images/${el.weather[0].icon}.svg`}
               alt=''
             />
             <p>{el.main.temp.toFixed(0)}°C</p>

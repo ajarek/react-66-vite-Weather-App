@@ -7,7 +7,7 @@ const Today = ({ nr, city, temp, desc, array }) => {
       <div className='img'>
         {' '}
         <img
-          src={`/images/${nr}.svg`}
+          src={`./images/${nr}.svg`}
           alt='icon'
         />
       </div>
