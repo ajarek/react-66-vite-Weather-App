@@ -1,21 +1,16 @@
-import React, {useRef, useEffect} from 'react'
+import React from 'react'
 import './Search.css'
-const Search = ({ searchValue, setSearchValue, placeholder}) => {
-  // const focusRef = useRef()
-
-  // useEffect(() => {
-  //   focusRef.current.focus()
-  // })
+const Search = ({ searchValue, setSearchValue, placeholder }) => {
   return (
     <div className='search'>
-       <input
-            className="search-input"
-            type="search"
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-            placeholder={placeholder}
-            autoFocus
-        />
+      <input
+        className='search-input'
+        type='search'
+        value={searchValue}
+        onChange={(e) => setSearchValue(e.target.value)}
+        placeholder={placeholder}
+        autoFocus
+      />
     </div>
   )
 }

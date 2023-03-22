@@ -29,14 +29,12 @@
 @media (max-width: 630px) {
   .today {
     width: 100%;
-    min-height:250px;
+    min-height: 250px;
     grid-template-columns: repeat(1, 1fr);
     margin-top: 0.5rem;
     padding: 0;
     box-shadow: none;
     border-radius: none;
-  
-
   }
   .today .img {
     height: 100px;

@@ -1,19 +1,23 @@
 import React from 'react'
 import ListNextDays from '../../components/ListNextDays/ListNextDays'
 import './Today.css'
-const Today = ({nr,city,temp,desc,array}) => {
+const Today = ({ nr, city, temp, desc, array }) => {
   return (
     <div className='today'>
-      <div className="img"> <img src={`/images/${nr}.svg`} alt="icon" /></div>
-      <div className="info">
+      <div className='img'>
+        {' '}
+        <img
+          src={`/images/${nr}.svg`}
+          alt='icon'
+        />
+      </div>
+      <div className='info'>
         <h2>Today</h2>
         <h1>{city}</h1>
-        <p>Temperature: {temp.toFixed(0)}°C</p>
+        <p>Temperature: {Number(temp).toFixed(0)}°C</p>
         <p>{desc}</p>
       </div>
-      <ListNextDays
-      array={array}
-      />
+      <ListNextDays array={array} />
     </div>
   )
 }
