@@ -4,6 +4,7 @@ import FullPageLayout from './components/FullPageLayout/FullPageLayout'
 import Today from './components/Today/Today'
 import Loading from './components/Loading/Loading'
 import ListNextDays from './components/ListNextDays/ListNextDays'
+import Error from './components/Error/Error'
 import useDebounce from './hooks/useDebounce'
 import useFetch from './hooks/useFetch'
 
@@ -33,11 +34,19 @@ function App() {
 
   return (
     <div className='App'>
+       {error ? (
+        <FullPageLayout>
+          <Error
+          message={error}
+           />
+        </FullPageLayout>
+      ) : null}
       {pending ? (
         <FullPageLayout>
           <Loading />
         </FullPageLayout>
       ) : null}
+     
       <Search
         searchValue={searchValue}
         setSearchValue={setSearchValue}

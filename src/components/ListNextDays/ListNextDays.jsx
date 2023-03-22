@@ -11,7 +11,7 @@ const ListNextDays = ({array}) => {
          <div className="day" key={index}>
            <p>{ new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date(el.dt_txt))}</p>
            <img src={`/images/${el.weather[0].icon}.svg`} alt="" />
-           <p>{el.main.temp}°C</p>
+           <p>{(el.main.temp).toFixed(0)}°C</p>
          </div>
       )
 

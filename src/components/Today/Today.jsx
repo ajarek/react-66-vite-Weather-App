@@ -8,7 +8,7 @@ const Today = ({nr,city,temp,desc,array}) => {
       <div className="info">
         <h2>Today</h2>
         <h1>{city}</h1>
-        <p>Temperature: {temp}°C</p>
+        <p>Temperature: {temp.toFixed(0)}°C</p>
         <p>{desc}</p>
       </div>
       <ListNextDays
