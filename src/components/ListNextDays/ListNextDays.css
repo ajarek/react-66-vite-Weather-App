@@ -1,11 +1,13 @@
 .list-next-days{
   width: 600px;
   height: 150px;
- 
+  
   position: absolute;
   bottom: -90px;
   display: flex;
   justify-content: space-evenly;
+
+  flex-wrap: wrap;
 }
 .list-next-days .day{
   box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.3);
@@ -16,4 +18,13 @@
   flex-direction: column;
   align-items: center;
   z-index: 2;
+}
+@media (max-width: 630px) {
+  .list-next-days{
+    width: 100%;  
+   bottom: -125px;
+  }
+  .list-next-days .day{
+    margin-bottom: 1rem;
+  }
 }
